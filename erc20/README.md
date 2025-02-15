@@ -1,66 +1,43 @@
-## Foundry
+# ERC20 Token Implementation
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project is part of the Advanced Foundry Course's "Develop an ERC20 cryptocurrency" section. It demonstrates how to create, test, and deploy an ERC20 token using OpenZeppelin contracts.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+- Implements ERC20 token using OpenZeppelin smart contracts
+- Includes comprehensive tests
+- Contains deployment scripts
+- Includes Makefile for common commands
 
 ## Usage
 
 ### Build
-
 ```shell
-$ forge build
+forge build
 ```
 
 ### Test
-
 ```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
+forge test
 ```
 
 ### Deploy
-
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+make deploy
 ```
 
-### Cast
+## Project Structure
 
-```shell
-$ cast <subcommand>
+```
+├── src/
+│   └── Token.sol       # Main ERC20 token contract
+├── test/
+│   └── Token.t.sol     # Test cases
+├── script/
+│   └── Deploy.s.sol    # Deployment script
+└── Makefile           # Common commands
 ```
 
-### Help
+## Course Reference
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This is part of the [Advanced Foundry Course](https://updraft.cyfrin.io/courses/advanced-foundry) by Cyfrin Updraft.
